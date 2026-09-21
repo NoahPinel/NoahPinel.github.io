@@ -37,25 +37,17 @@
 
   .photo-wrap {
     float: right;
-    width: 170px;
+    width: 240px;
     margin: 0 0 12px 20px;
     text-align: center;
   }
 
-  .photo-placeholder,
   .photo-wrap img {
-    width: 170px;
-    height: 210px;
+    display: block;
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
     border: 1px solid #000000;
-  }
-
-  .photo-placeholder {
-    background: #cccccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8em;
-    color: #444444;
   }
 
   .caption {
@@ -68,6 +60,13 @@
   hr { margin: 20px 0; }
 
   footer { font-size: 0.85em; color: #444444; }
+
+  @media (max-width: 520px) {
+    .photo-wrap {
+      float: none;
+      margin: 0 auto 16px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -80,9 +79,8 @@
   <hr>
 
   <div class="photo-wrap">
-    <div class="photo-placeholder">photo.jpg</div>
     <img src="./IMG/Pinel.jpg" alt="Noah Pinel">
-    <div class="caption"><a href="https://fr.wikipedia.org/wiki/Rue_Pinel">La rue Pinel</a></div>
+    <div class="caption"><a href="https://fr.wikipedia.org/wiki/Rue_Pinel" target="_blank">La rue Pinel</a></div>
   </div>
 
   <p>I am a graduate student at the University of Calgary.</p>
@@ -92,8 +90,6 @@
     <li>Statistical Learning Theory</li>
     <li>Computational Neuroscience</li>
     <li>Computer Vision</li>
-    <li>Statistics</li>
-    <li>Algorithms</li>
     <li>...</li>
   </ul>
 
